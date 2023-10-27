@@ -56,7 +56,7 @@ export default function HomePage() {
                 fullWidth
                 variant="outlined"
                 onClick={() => {
-                  router.push("http://localhost:3000/");
+                  router.push("https://mantine-juriewagener.vercel.app/");
                 }}
                 sx={{ width: 260 }}
               >
