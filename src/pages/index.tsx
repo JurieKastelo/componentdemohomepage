@@ -35,6 +35,7 @@ export default function Info() {
               <TableCell>Library</TableCell>
               <TableCell align="center">Mobile</TableCell>
               <TableCell align="center">Desktop</TableCell>
+              <TableCell align="center">View Demo</TableCell>
               <TableCell
                 align="right"
                 sx={{
@@ -55,16 +56,17 @@ export default function Info() {
           </TableHead>
           <TableBody>
             <TableRow>
-              <TableCell>
-                <Link href="https://mantine-juriewagener.vercel.app/">
-                  Mantine
-                </Link>
-              </TableCell>
+              <TableCell>Mantine</TableCell>
               <TableCell align="center">
                 <Image src={Check} width={20} height={20} alt="Check" />
               </TableCell>
               <TableCell align="center">
                 <Image src={Check} width={20} height={20} alt="Check" />
+              </TableCell>
+              <TableCell align="center">
+                <Button href="https://mantine-juriewagener.vercel.app/">
+                  View
+                </Button>
               </TableCell>
               <TableCell align="right">
                 <Button href="https://github.com/JurieKastelo/mantine">
