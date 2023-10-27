@@ -12,6 +12,7 @@ import Phone from "../../public/phone.svg";
 import Image from "next/image";
 import GitHubLogo from "../../public/github-icon.svg";
 import Check from "../../public/check.svg";
+import Link from "next/link";
 
 export default function Info() {
   return (
@@ -54,7 +55,11 @@ export default function Info() {
           </TableHead>
           <TableBody>
             <TableRow>
-              <TableCell>Mantine</TableCell>
+              <TableCell>
+                <Link href="https://mantine-juriewagener.vercel.app/">
+                  Mantine
+                </Link>
+              </TableCell>
               <TableCell align="center">
                 <Image src={Check} width={20} height={20} alt="Check" />
               </TableCell>
