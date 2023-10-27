@@ -1,247 +1,108 @@
-import { Box, Button, Typography } from "@mui/material";
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import GitHubLogo from "../../public/github-icon.svg";
-import GitHubLogoDisabled from "../../public/github-icon-disable.svg";
+import * as React from "react";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
+import { Box, Button, Tooltip, Typography } from "@mui/material";
 import Desktop from "../../public/desktop.svg";
 import Phone from "../../public/phone.svg";
+import Image from "next/image";
+import GitHubLogo from "../../public/github-icon.svg";
+import Check from "../../public/check.svg";
 
-export default function HomePage() {
-  const router = useRouter();
+export default function Info() {
   return (
-    <>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100vh",
-        }}
-      >
-        <Box sx={{ mb: 10 }}>
-          <Typography fontSize={40}>Choose a library!</Typography>
-        </Box>
-        <Box
-          sx={{
-            display: "flex",
-            gap: 10,
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "10px",
-            }}
-          >
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "flex-start",
-                alignItems: "center",
-                gap: "10px",
-              }}
-            >
-              <Link href="https://github.com/JurieKastelo/mantine">
-                <Image
-                  src={GitHubLogo}
-                  width={30}
-                  height={30}
-                  alt="GitHubLogo"
-                />
-              </Link>
-              <Button
-                fullWidth
-                variant="outlined"
-                onClick={() => {
-                  router.push("https://mantine-juriewagener.vercel.app/");
-                }}
-                sx={{ width: 260 }}
-              >
-                Mantine
-              </Button>
-              <Box sx={{ ml: 1 }}>
-                <Image src={Desktop} width={30} height={30} alt="Desktop" />
-              </Box>
-              <Box sx={{ ml: 1 }}>
-                <Image src={Phone} width={20} height={20} alt="Desktop" />
-              </Box>
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "flex-start",
-                alignItems: "center",
-                gap: "10px",
-                width: "100%",
-              }}
-            >
-              <Image
-                src={GitHubLogoDisabled}
-                width={30}
-                height={30}
-                alt="GitHubLogo"
-              />
-              <Button
-                sx={{ width: 260 }}
-                disabled
-                fullWidth
-                variant="outlined"
-                onClick={() => {
-                  router.push("https://nextui-juriewagener.vercel.app/");
-                }}
-              >
-                Next UI
-              </Button>
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "flex-start",
-                alignItems: "center",
-                gap: "10px",
-                width: "100%",
-              }}
-            >
-              <Image
-                src={GitHubLogoDisabled}
-                width={30}
-                height={30}
-                alt="GitHubLogo"
-              />
-              <Button
-                sx={{ width: 260 }}
-                fullWidth
-                disabled
-                variant="outlined"
-                onClick={() => {
-                  router.push("/tailwind");
-                }}
-              >
-                Tailwind
-              </Button>
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "flex-start",
-                alignItems: "center",
-                gap: "10px",
-                width: "100%",
-              }}
-            >
-              <Image
-                src={GitHubLogoDisabled}
-                width={30}
-                height={30}
-                alt="GitHubLogo"
-              />
-              <Button
-                sx={{ width: 260 }}
-                fullWidth
-                disabled
-                variant="outlined"
-                onClick={() => {
-                  router.push("/rebass");
-                }}
-              >
-                Rebass
-              </Button>
-            </Box>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "flex-start",
-                alignItems: "center",
-                gap: "10px",
-                width: "100%",
-              }}
-            >
-              <Image
-                src={GitHubLogoDisabled}
-                width={30}
-                height={30}
-                alt="GitHubLogo"
-              />
-              <Button
-                sx={{ width: 260 }}
-                fullWidth
-                disabled
-                variant="outlined"
-                onClick={() => {
-                  router.push("/gleustack");
-                }}
-              >
-                Gluestack
-              </Button>
-            </Box>
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              gap: "10px",
-            }}
-          >
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "flex-start",
-                alignItems: "center",
-                gap: "10px",
-              }}
-            >
-              <Image
-                src={GitHubLogoDisabled}
-                width={30}
-                height={30}
-                alt="GitHubLogo"
-              />
-              <Button
-                sx={{ width: 260 }}
-                fullWidth
-                disabled
-                variant="outlined"
-                onClick={() => {
-                  router.push("/gleustack");
-                }}
-              >
-                Gluestack
-              </Button>
-            </Box>
-          </Box>
-        </Box>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "10px",
-            mt: 10,
-          }}
-        >
-          <Image
-            src={GitHubLogoDisabled}
-            width={30}
-            height={30}
-            alt="GitHubLogo"
-          />
-          <Button
-            sx={{ width: 260 }}
-            fullWidth
-            disabled
-            variant="outlined"
-            onClick={() => {
-              router.push("/randome-cool-things");
-            }}
-          >
-            Randome Cool Things
-          </Button>
-        </Box>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        height: "100vh",
+        mt: 10,
+      }}
+    >
+      <Box mt={10} mb={5} fontSize={40}>
+        UI Libraries
       </Box>
-    </>
+      <TableContainer sx={{ width: 1200 }}>
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell>Library</TableCell>
+              <TableCell align="center">Mobile</TableCell>
+              <TableCell align="center">Desktop</TableCell>
+              <TableCell
+                align="right"
+                sx={{
+                  alignItems: "center",
+                  display: "flex",
+                }}
+              >
+                <Box sx={{ mr: 2 }}>
+                  <Image
+                    src={GitHubLogo}
+                    width={30}
+                    height={30}
+                    alt="GitHubLogo"
+                  />
+                </Box>
+              </TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            <TableRow>
+              <TableCell>Mantine</TableCell>
+              <TableCell align="center">
+                <Image src={Check} width={20} height={20} alt="Check" />
+              </TableCell>
+              <TableCell align="center">
+                <Image src={Check} width={20} height={20} alt="Check" />
+              </TableCell>
+              <TableCell align="right">
+                <Button href="https://github.com/JurieKastelo/mantine">
+                  View
+                </Button>
+              </TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </TableContainer>
+
+      <Box mt={10} fontSize={40}>
+        Next In Line
+      </Box>
+
+      <TableContainer sx={{ width: 1200 }}>
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell>#</TableCell>
+              <TableCell align="left">Libraries</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            <TableRow>
+              <TableCell>1</TableCell>
+              <TableCell align="left">Next UI</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>2</TableCell>
+              <TableCell align="left">Tailwind</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>3</TableCell>
+              <TableCell align="left">Rebass</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>4</TableCell>
+              <TableCell align="left">Gluestack</TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </Box>
   );
 }
